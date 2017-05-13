@@ -46,4 +46,5 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-./src/node_modules
+src/dev/node_modules
+
