@@ -1,0 +1,37 @@
+.vcenter {
+  display: inline-block;
+  vertical-align: middle;
+  float: none; }
+
+body {
+  font-family: "Open Sans Condensed", sans-serif;
+  background-color: #9EBFBB; }
+
+.bg-pri-drk {
+  background-color: #48726D; }
+
+#banner {
+  background-image: url("../assets/saturn.jpg");
+  font-family: "Open Sans Condensed", sans-serif;
+  height: 100%;
+  color: #FFE4D8;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex; }
+  #banner h1 {
+    font-size: 60px; }
+
+#space-ship {
+  position: absolute;
+  animation-name: spaceshipMove;
+  animation-duration: 4s;
+  animation-iteration-count: infinite; }
+
+@keyframes spaceshipMove {
+  0% {
+    top: 20%; }
+  50% {
+    top: 40%; }
+  100% {
+    top: 20%; } }

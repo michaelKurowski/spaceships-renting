@@ -1,0 +1,56 @@
+
+
+$color-pri-drk: #48726D;
+$color-pri-med: #9EBFBB;
+$color-pri-lgt: #7F7F7F;
+
+$color-sec-med: #BFA89E;
+$color-sec-lgt: #FFE4D8;
+
+$font-ornate: 'Open Sans Condensed', sans-serif;
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+body {
+	font-family: $font-ornate;
+	background-color: $color-pri-med;
+}
+
+.bg-pri-drk {
+	background-color: $color-pri-drk;
+}
+
+#banner {
+	background-image: url('../assets/saturn.jpg');
+	font-family: $font-ornate;
+	height: 100%;
+	color: $color-sec-lgt;
+	text-align: center;
+	justify-content: center;
+  	align-items: center;
+ 	display: flex;
+	h1 {
+		font-size: 60px;
+
+	}
+}
+
+#space-ship {
+	position: absolute;
+	animation-name: spaceshipMove;
+    animation-duration: 4s;
+	animation-iteration-count: infinite;
+}
+
+#planet {
+}
+
+@keyframes spaceshipMove {
+    0% {top: 20%;}
+    50% {top: 40%;}
+	100% {top: 20%;}
+}
