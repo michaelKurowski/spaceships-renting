@@ -5,28 +5,52 @@
 
 body {
   font-family: "Open Sans Condensed", sans-serif;
-  background-color: #9EBFBB; }
+  background-color: #9EBFBB;
+  overflow-y: hidden; }
+
+.bg-pattern {
+  background-image: url("../assets/tile.png");
+  background-repeat: repeat; }
+
+.bg-pluto {
+  background-image: url("../assets/pluto.jpg"); }
 
 .bg-pri-drk {
   background-color: #48726D; }
 
-#banner {
+.br-pri-lgt {
+  background-color: white; }
+
+.banner {
   background-image: url("../assets/saturn.jpg");
   font-family: "Open Sans Condensed", sans-serif;
-  height: 100%;
-  color: #FFE4D8;
+  color: white;
   text-align: center;
   justify-content: center;
   align-items: center;
   display: flex; }
-  #banner h1 {
+  .banner h1 {
     font-size: 60px; }
+
+.slider {
+  cursor: pointer; }
+
+.view {
+  height: 100%; }
 
 #space-ship {
   position: absolute;
   animation-name: spaceshipMove;
   animation-duration: 4s;
   animation-iteration-count: infinite; }
+
+.hide {
+  animation-name: hide;
+  animation-duration: 1s; }
+
+.show {
+  animation-name: show;
+  animation-duration: 1s; }
 
 @keyframes spaceshipMove {
   0% {
@@ -35,3 +59,15 @@ body {
     top: 40%; }
   100% {
     top: 20%; } }
+
+@keyframes hide {
+  from {
+    height: 100%; }
+  to {
+    height: 0%; } }
+
+@keyframes show {
+  from {
+    height: 100%; }
+  to {
+    height: 0%; } }

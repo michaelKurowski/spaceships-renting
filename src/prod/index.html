@@ -1,31 +1,67 @@
 
 <head>
-		<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300'>
-		<link rel='stylesheet' href='css/theme.css'>
-		<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
-		<script src='https://code.jquery.com/jquery-3.2.1.js'></script>
-		<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'>
-		<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.js'></script>
-		<script src='app.js'></script>
+	<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300'>
+	<link rel='stylesheet' href='css/theme.css'>
+	<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+	<script src='https://code.jquery.com/jquery-3.2.1.js'></script>
+	<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.js'></script>
+
+	<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+	<script src='spaceshipsPropeties.js'></script>
+	<script src='spaceships.js'></script>
+	<script src='app.js'></script>
+	<script src='ang.js'></script>
 </head>
 
 
-<body class='container-fluid'>
-	<div class='navbar navbar-toggleable-md navbar-light fixed-top nav-inverse' >
-		<div class='navbar-header'>
-			<a class="navbar-brand" href="#">
-				Space Relays
-			<i class="fa fa-bars navbar-toggle hidden-lg-up" data-toggle="collapse" data-target="#scrollers"  aria-expanded="false" aria-controls="scrollers">
-			</i></a>
-		</div>
-	</div>
-	<div class='row ' id='banner'>
+
+<body class='container-fluid' ng-app='spaceships'>
+	<div class='row banner view' id='page-0'>
 		<div>
-			<h1 class='text-center pagination-centered'>Space Relays</h1>
-			<h2 class='text-center pagination-centered'>We create future, for you, today</h2>
-
+			<h1>Space Relays</h1>
+			<h2>We create future, for you, today</h2>
+			<h1 id='to-slide-1' class='slider'> V </h1>
 		</div>
-
 	</div>
+	<div class='row view bg-pluto' id='page-1'>
+		
+		<div ng-controller='searchMask' class='col-md-4 col-md-offset-4 br-pri-lgt'>
+			<h1>Find a flight</h1>
+			Pick up location:
+			<select class='form-control'>
+				<option ng-repeat='location in locations' value='{{location}}'>{{location}}</option>
+			</select>
+			Landing location:
+			<select class='form-control'>
+				<option ng-repeat='location in locations' value='{{location}}'>{{location}}</option>
+			</select>
 
+			Landing location:
+			<select class='form-control'>
+				<option ng-repeat='n in listedArr(10,20)' value='{{n}}'>{{n}}</option>
+			</select>
+
+			<input value='2020'></input>
+			<select>
+			
+			</select>
+			<select>
+			
+			</select>
+
+			<button class='btn btn-success' id='to-slide-2'> Continue </button>
+		</div>
+	</div>
+	<div class='row view' id='page-2'>
+		<div>
+			<h1>Choose From List</h1>
+			<h2>We create future, for you, today</h2>
+		</div>
+	</div>
+	<div class='row view' id='page-3'>
+		<div>
+			<h1>Finalizing Transaction</h1>
+			<h2>We create future, for you, today</h2>
+		</div>
+	</div>
 </body>
