@@ -13,7 +13,18 @@ window.app.querySpaceshipsBy = function (propetiesObj) {
 
 void function () {
 	document.addEventListener('DOMContentLoaded', function () {
-		initSliders();
+		initSliders(); /*
+                 pickmeup('.date', {
+                 flat : true
+                 })*/
+		var futureDate = new Date();
+		futureDate.setFullYear(2240, 10, 3);
+		pickmeup('.date-input', {
+			position: 'bottom',
+			hide_on_select: true,
+			mode: 'range',
+			date: futureDate
+		});
 	});
 
 	function initSliders() {
@@ -53,7 +64,7 @@ void function () {
 	}
 	function showPage(id) {
 		$('#page-' + id).animate({
-			height: '100%',
+			height: '100vh',
 			opacity: 1.0
 		}, 1000);
 		var elems = $('[id^=page-]');
@@ -69,7 +80,7 @@ void function () {
 				var _elId = parseInt(el.id.split('-')[1]);
 				if (_elId !== id) {
 					$('#page-' + _elId).animate({
-						height: '0%',
+						height: '0vh',
 						opacity: 0
 					}, 1000);
 				}

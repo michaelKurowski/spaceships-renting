@@ -20,8 +20,18 @@ window.app.querySpaceshipsBy = propetiesObj => {
 
 void (function () {
 	document.addEventListener('DOMContentLoaded', () => {
-		initSliders()
-
+		initSliders()/*
+		pickmeup('.date', {
+			flat : true
+		})*/
+		const futureDate = new Date()
+		futureDate.setFullYear(2240, 10, 3)
+		pickmeup('.date-input', {
+			position: 'bottom',
+			hide_on_select: true,
+			mode: 'range',
+			date: futureDate
+		})
 	})
 
 
@@ -37,7 +47,7 @@ void (function () {
 	}
 	function showPage(id) {
 		$('#page-' + id).animate({
-			height: '100%',
+			height: '100vh',
 			opacity: 1.0
 		}, 1000)
 		let elems = $('[id^=page-]')
@@ -46,7 +56,7 @@ void (function () {
 			let elId = parseInt(  el.id.split('-')[1]  )
 			if (elId !== id) {
 				$('#page-' + elId).animate({
-					height: '0%',
+					height: '0vh',
 					opacity: 0
 				}, 1000)
 			}
