@@ -13,6 +13,7 @@ body {
   background-repeat: repeat; }
 
 .bg-pluto {
+  background-size: cover;
   background-image: url("../assets/pluto.jpg"); }
 
 .bg-pri-drk {
@@ -24,6 +25,7 @@ body {
 .banner {
   background-image: url("../assets/saturn.jpg");
   font-family: "Open Sans Condensed", sans-serif;
+  background-size: cover;
   color: white;
   text-align: center;
   justify-content: center;

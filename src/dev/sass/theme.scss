@@ -27,6 +27,7 @@ body {
 }
 
 .bg-pluto {
+	background-size: cover;
 	background-image: url('../assets/pluto.jpg');
 }
 
@@ -41,7 +42,7 @@ body {
 .banner {
 	background-image: url('../assets/saturn.jpg');
 	font-family: $font-ornate;
-
+	background-size: cover;
 	color: $color-sec-lgt;
 	text-align: center;
 	justify-content: center;
