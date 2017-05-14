@@ -30,35 +30,40 @@
 		<div ng-controller='searchMask' class='col-md-4 col-md-offset-4 panel'>
 			<h1>Find a flight</h1>
 			Pick up location:
-			<select class='form-control'>
+			<select class='form-control' ng-model='query.origin'>
 				<option ng-repeat='location in locations' value='{{location}}'>{{location}}</option>
 			</select>
 			Landing location:
-			<select class='form-control'>
+			<select class='form-control' ng-model='query.destination'>
 				<option ng-repeat='location in locations' value='{{location}}'>{{location}}</option>
 			</select>
 
 			Price limit:
-			<select class='form-control'>
-				<option ng-repeat='n in listedArr(4000,20000, 1000)' value='{{n}}'>{{n}} $</option>
+			<select class='form-control' ng-model='query.priceLimit'>
+				<option ng-repeat='n in listedArr(4000,30000, 1000)' value='{{n}}'>{{n}} $</option>
 			</select>
 
 			Class:
-			<select class='form-control'>
+			<select class='form-control' ng-model='query.class'>
 				<option ng-repeat='class in classes' value='{{class}}'>{{class}}</option>
 			</select>
 
+			Seats:
+			<select class='form-control' ng-model='query.seats'>
+				<option ng-repeat='seats in listedArr(1,20, 1)' value='{{seats}}'>{{seats}}</option>
+			</select>
+
 			Date range: 
-			<input class='form-control date-input' value='01-01-2014'>
+			<input id='date-range' class='form-control date-input' value='01-01-2014' >
 			<div class='pg-5'>
-				<input type='checkbox' id='disabled-persons' ng-model='query.disabled'> Facilities for the disabled
+				<input type='checkbox' id='disabled-persons' ng-model='query.forDisabled' ng-true-value='true' ng-false-value='false'> Facilities for the disabled
 			</div>
 			<div class='pg-5'>
-				<input type='checkbox' id='children' ng-model='query.model'> Facilities for people with children
+				<input type='checkbox' id='children' ng-model='query.forChildren' ng-true-value='true' ng-false-value='false'> Facilities for people with children
 			</div>
-							
+			<div id='val'>{{query.dateRange}}</div>		
 			
-			<button class='btn btn-success mb-4' id='to-slide-2'> Continue </button>
+			<button class='btn btn-success mb-4' id='to-slide-2' ng-click='searchQuery()'> Continue </button>
 		</div>
 	</div>
 	<div class='row view' id='page-2'>

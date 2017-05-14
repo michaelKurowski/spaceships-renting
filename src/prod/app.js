@@ -13,10 +13,7 @@ window.app.querySpaceshipsBy = function (propetiesObj) {
 
 void function () {
 	document.addEventListener('DOMContentLoaded', function () {
-		initSliders(); /*
-                 pickmeup('.date', {
-                 flat : true
-                 })*/
+		initSliders();
 		var futureDate = new Date();
 		futureDate.setFullYear(2240, 10, 3);
 		pickmeup('.date-input', {

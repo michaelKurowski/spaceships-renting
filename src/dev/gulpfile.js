@@ -8,11 +8,13 @@ gulp.task('sass', function () {
   return gulp.src('./sass/**/*.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('../prod/css'))
+        .on('error', function (err) {console.log(err);this.emit('end')})
 })
  
 gulp.task('copy', function () {
   return gulp.src('./app/**/*.html')
     .pipe(gulp.dest('../prod/'))
+        .on('error', function (err) {console.log(err);this.emit('end')})
 })
 
 
@@ -27,10 +29,12 @@ gulp.task('sass:watch', function () {
 gulp.task('babel', () => {
     return gulp.src('./app/**/*.js')
         .pipe(babel({presets: ['es2015']}))
-        .pipe(gulp.dest('../prod/'));
+        .pipe(gulp.dest('../prod/'))
+        .on('error', function (err) {console.log(err);this.emit('end')})
 })
 gulp.task('js:watch', () => {
     gulp.watch('./app/**/*.js', ['babel'])
+
 })
 
 gulp.task('default', function () {

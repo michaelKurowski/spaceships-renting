@@ -13,17 +13,9 @@ window.app.querySpaceshipsBy = propetiesObj => {
 }
 
 
-
-
-
-
-
 void (function () {
 	document.addEventListener('DOMContentLoaded', () => {
-		initSliders()/*
-		pickmeup('.date', {
-			flat : true
-		})*/
+		initSliders()
 		const futureDate = new Date()
 		futureDate.setFullYear(2240, 10, 3)
 		pickmeup('.date-input', {
@@ -32,6 +24,7 @@ void (function () {
 			mode: 'range',
 			date: futureDate
 		})
+		
 	})
 
 
