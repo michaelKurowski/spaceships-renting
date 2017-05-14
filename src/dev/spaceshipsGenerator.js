@@ -34,6 +34,8 @@ function randomSpaceship() {
 		productionYear: utils.randMinMax(productionYear[0], productionYear[1]),
 		maxSpeed: utils.randMinMax(maxSpeed[0], maxSpeed[1]),
 		seats: utils.randMinMax(seats[0], seats[1]),
+		forDisabled: Math.random() > 0.5,
+		forChildren: Math.random() > 0.5,
 		pickUp,
 		landing,
 		description: ''
@@ -64,9 +66,7 @@ let amountOfSpaceships = 100
 while (amountOfSpaceships--) {
 	main.spaceships.push( spaceship(randomSpaceship()) )
 }
-document.addEventListener('DOMContentLoaded',
-	() => download('spaceships.js', JSON.stringify(main.spaceships))
-)
+
 
 
 
