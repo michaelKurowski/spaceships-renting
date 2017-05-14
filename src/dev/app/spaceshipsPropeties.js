@@ -1,4 +1,5 @@
 (function() {
+	//Spaceships
 	window.app = window.app || {}
 	window.app.queryPropeties = {}
 	window.app.queryPropeties.seats = [3, 20]
@@ -13,5 +14,11 @@
 		'Pluton',
 		'Io'
 	]
+	window.app.queryPropeties.facilitiesForDisabled = 'bool'
+	window.app.queryPropeties.facilitiesForChildren = 'bool'
+	//Flights
+	window.app.queryPropeties.prices = [4500, 25000]	
+	window.app.queryPropeties.class = ['Storeroom', 'Economic', 'Business', 'Privilleged']
+	window.app.queryPropeties.class
 })()
 
